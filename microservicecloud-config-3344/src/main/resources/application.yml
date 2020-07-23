@@ -1,0 +1,29 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  microservicecloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liuchenxing8214/microservicecloud-config.git
+          search-paths:
+            - microservicecloud-config
+      label: master
+      username: 1791354972@qq.com
+      password: 134764lc8214
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
