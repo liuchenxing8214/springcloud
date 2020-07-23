@@ -12,8 +12,8 @@ spring:
           search-paths:
             - microservicecloud-config
       label: master
-      username: 1791354972@qq.com
-      password: 134764lc8214
+      username:
+      password:
 
 
 eureka:
