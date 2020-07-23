@@ -5,6 +5,13 @@ spring:
   application:
     name: microservicecloud-zuul-gateway
 
+zuul:
+  prefix: /atguigu
+  ignored-services: "*"
+  routes:
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+
 eureka:
   client:
     service-url:
@@ -13,18 +20,9 @@ eureka:
     instance-id: gateway-9527.com
     prefer-ip-address: true
 
-
 info:
   app.name: atguigu-microcloud
   company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
-
-
-zuul:
-  prefix: /atguigu
-  ignored-services: "*"
-  routes:
-    mydept.serviceId: microservicecloud-dept
-    mydept.path: /mydept/**
